@@ -1,0 +1,1 @@
+logLength = a => console.log(a.length);
