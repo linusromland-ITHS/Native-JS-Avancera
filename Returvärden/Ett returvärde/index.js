@@ -1,0 +1,1 @@
+greeting = () => {return "Hello World!"}
