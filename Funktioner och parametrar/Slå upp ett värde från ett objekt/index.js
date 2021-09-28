@@ -1,0 +1,1 @@
+lookup = (o, b) => console.log(o[b])
