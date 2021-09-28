@@ -1,0 +1,3 @@
+displayDialogBox = (a) => {
+    alert(a)
+}
