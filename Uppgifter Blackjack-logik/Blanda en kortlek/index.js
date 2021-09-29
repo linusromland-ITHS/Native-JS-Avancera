@@ -24,16 +24,16 @@ draw = (deck) => {
 }
 
 shuffle = (deck) => {
-    let m = deck.length,
-        t, i;
+    let curr = deck.length,
+        random;
+    while (curr != 0) {
 
-    while (m) {
+        random = Math.floor(Math.random() * curr);
+        curr--;
 
-        i = Math.floor(Math.random() * m--);
-
-        t = deck[m];
-        deck[m] = deck[i];
-        deck[i] = t;
+        [deck[curr], deck[random]] = [
+            deck[random], deck[curr]
+        ];
     }
 }
 
