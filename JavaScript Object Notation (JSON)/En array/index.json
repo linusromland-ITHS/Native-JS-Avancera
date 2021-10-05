@@ -1,0 +1,20 @@
+[
+  {
+    "userName": "Bob",
+    "password": "secret",
+    "tjo": true,
+    "monke": 2
+  },
+  {
+    "userName": "Bob",
+    "password": "secret",
+    "tjo": true,
+    "monke": 2
+  },
+  {
+    "userName": "Bob",
+    "password": "secret",
+    "tjo": true,
+    "monke": 2
+  }
+]
