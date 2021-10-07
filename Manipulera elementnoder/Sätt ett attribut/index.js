@@ -1,1 +1,1 @@
-document.getElementsByTagName("ol")[0].setAttribute("type", "I")
+document.getElementsByTagName("ol")[0].setAttribute("type", "i")
