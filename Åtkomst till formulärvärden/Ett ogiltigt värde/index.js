@@ -1,21 +1,26 @@
-document.getElementById("name").value = ""
+let button = document.getElementById("send")
+button.disabled = true;
+let name = document.getElementById("name")
+let greeting = document.getElementById("greeting")
+let error = document.getElementById("errors")
 
-update()
+if(name.value.length < 1) error.style.display = "block"
 
-document.getElementById("send").addEventListener("click", () => {
-    document.getElementById("greeting").textContent = `Hej ${document.getElementById("name").value}!`
+if(name.value.length > 0) {
+    greeting.innerText = `Hej ${name.value}!`
+    button.disabled = false;
+}
+
+button.addEventListener('click', () =>{
+    greeting.innerText = `Hej ${name.value}!`
 })
 
-document.getElementById("name").addEventListener("change", update)
-
-function update() {
-    if(document.getElementById("name").value != ""){
-        document.getElementById("send").disabled = false
-        document.getElementById("greeting").textContent = `Hej ${document.getElementById("name").value}!`
-        document.getElementById("greeting").style.display = "block"
-    }else{
-        document.getElementById("send").disabled = true;
-        document.getElementById("greeting").style.display = "none"
-    
+name.addEventListener('input', (e) =>{
+    if(e.target.value.length < 1) {
+        button.disabled = true;
+        error.style.display = "block"
+    } else {
+        button.disabled = false;
+        error.style.display = "none"
     }
-}
+})
